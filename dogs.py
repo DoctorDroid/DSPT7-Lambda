@@ -11,7 +11,7 @@ class Dog():
         print(f'{self.name} likes to bark!')
 
 class Beagle(Dog):
-    def __init__(self, name, age, housebroken=True, barks_alot):
+    def __init__(self, name, age, housebroken=True, barks_alot=True):
         super().__init__(name, age, housebroken)
         self.barks_alot = barks_alot
 
@@ -22,6 +22,6 @@ class Beagle(Dog):
             print(f'{self.name} hates to bark!')    
 if __name__ == "__main__":
 
-    lucky = Dog("Lucky", 3, "Labrador")
-    spike = Beagle("Spike", 7, "Boxer", housebroken=True, barks_alot=False)
+    lucky = Dog("Lucky", 3)
+    spike = Beagle("Spike", 7, barks_alot=False)
     breakpoint()
